@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cp  dynamic_cloudns.timer /etc/systemd/system/
+
+cp dynamic_cloudns.service  /etc/systemd/system/
+
+cp dynamic_cloudns.py  /usr/sbin/
+cp dynamic_cloudns  /usr/sbin/
+
+

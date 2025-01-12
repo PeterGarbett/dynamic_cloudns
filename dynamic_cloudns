@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Isolate system specifc cloudns info here
+
+/usr/bin/python3 /usr/sbin/dynamic_cloudns.py <insert url obtained from cloudns here>
+
+

@@ -1,0 +1,18 @@
+#
+#	Service file to log internet speed
+#
+#	This file needs to be on /etc/systemd/system/
+#
+[Unit]
+Description=Update cloudns
+Wants=dynamic_cloudns.timer
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/dynamic_cloudns 
+
+
+[Install]
+WantedBy=multi-user.target
+

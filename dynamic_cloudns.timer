@@ -1,0 +1,16 @@
+#
+#	cloudns dns update
+#
+#       This file needs to be on /etc/systemd/system/
+#
+
+[Unit]
+Description=Cloudns update
+Requires=dynamic_cloudns.service
+
+[Timer]
+Unit=dynamic_cloudns.service
+OnCalendar=*:0/30
+
+[Install]
+WantedBy=timers.target
