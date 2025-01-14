@@ -9,7 +9,7 @@ from requests import get
 def get_public_ip():
     """Retrieve external ip address"""
     print("Retrieving external IP address")
-    ip = get("https://api.ipify.org",timeout=20).content.decode("utf8")
+    ip = get("https://api.ipify.org", timeout=20).content.decode("utf8")
     return ip
 
 
@@ -47,7 +47,8 @@ def update_ip(old_ip, dynamic_dns_url):
 
                 page = urllib.request.urlopen(dynamic_dns_url)
                 page.close()
-        except:
+        except Exception as err:
+            print(err)
             return False
     else:
         print("Dummy call to update IP")
