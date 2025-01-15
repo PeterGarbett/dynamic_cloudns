@@ -5,8 +5,9 @@
 #
 [Unit]
 Description=Update cloudns
-Wants=dynamic_cloudns.timer
 Wants=network-online.target
+After=network-online.target
+Wants=dynamic_cloudns.timer
 
 [Service]
 Type=oneshot
